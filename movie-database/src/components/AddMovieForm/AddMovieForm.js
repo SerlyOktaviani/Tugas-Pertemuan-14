@@ -3,11 +3,17 @@ import { useState } from "react";
 import Alert from "../Alert/Alert";
 import Button from "../ui/Button";
 import styles from "./AddMovieForm.module.css";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { addMovie } from "../../features/index";
 
 // Menangkap props
-function AddMovieForm(props) {
-  // Destructing props: state movies
-  const { movies, setMovies } = props;
+function AddMovieForm() {
+
+  const dispatch = useDispatch();
+  
+  const navigation = useNavigate();
+
 
   const [formData, setFormData] = useState({
     title: "",
@@ -59,7 +65,8 @@ function AddMovieForm(props) {
     }
   }
 
-  function addMovie() {
+  function submitMovie() {
+    console.log("testing");
     const movie = {
       id: nanoid(),
       title: title,
@@ -68,14 +75,15 @@ function AddMovieForm(props) {
       poster: poster,
     };
 
-    // SOLVED: HOW TO ADD MOVIE TO MOVIES :)
-    setMovies([...movies, movie]);
+    dispatch(addMovie(movie));
+    navigation("/");
+
   }
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    validate() && addMovie();
+    validate() && submitMovie();
   }
 
   const { title, date, poster, type } = formData;
