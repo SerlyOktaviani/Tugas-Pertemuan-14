@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Tugas-Pertemuan-14/static/css/main.9299885a.css",
+    "main.js": "/Tugas-Pertemuan-14/static/js/main.7048a8f4.js",
+    "static/js/787.d02d9e27.chunk.js": "/Tugas-Pertemuan-14/static/js/787.d02d9e27.chunk.js",
+    "index.html": "/Tugas-Pertemuan-14/index.html",
+    "main.9299885a.css.map": "/Tugas-Pertemuan-14/static/css/main.9299885a.css.map",
+    "main.7048a8f4.js.map": "/Tugas-Pertemuan-14/static/js/main.7048a8f4.js.map",
+    "787.d02d9e27.chunk.js.map": "/Tugas-Pertemuan-14/static/js/787.d02d9e27.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9299885a.css",
+    "static/js/main.7048a8f4.js"
+  ]
+}
